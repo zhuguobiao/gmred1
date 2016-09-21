@@ -1,0 +1,40 @@
+<?page title="客户管理系统" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:c="client">
+	<zscript><![CDATA[
+		
+	]]></zscript>
+	
+	
+	<window id="win" border="none" width="100%" onClientInfo="onClientInfo(event)" title="物流管理" apply="com.red.composer.GuideComposer">
+		<zscript><![CDATA[
+			void onClientInfo(ClientInfoEvent event) {
+				win.setHeight(event.getDesktopHeight() + 50 + "px");
+			}
+		]]></zscript>
+		<borderlayout>
+			<north></north>
+			<south></south>
+			<center>
+				<grid height="100%" style="padding:0px;border : none" >
+					<columns>
+						<column></column>
+					</columns>
+					<rows>
+						<row>
+							<window title="仓库管理" border="normal" height="11.8em">
+								<button label="客户管理"  href="/customerList.zul"
+									image="/images/rename-64x64-icon.png"  orient="vertical" />
+							</window>
+						</row>
+					</rows>
+					
+				</grid>
+			
+			</center>
+			<west></west>
+			<east></east>
+		</borderlayout>
+		
+	</window>
+	
+</zk>
